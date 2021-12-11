@@ -4,18 +4,13 @@ import numpy as np
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = 'abd3e6fb8a9854dd92a30cfc6dab510d'
+app.config["SECRET_KEY"] = 'chmd'
 clf = joblib.load(r'C:\Users\anurx\OneDrive\Documents\cardio check\heart_rf_model.sav')
 
 
 @app.route('/')
 def hello_world():
     return render_template("Home.html")
-
-
-@app.route('/about')
-def about():
-    return render_template("aboutus.html", title='About Us')
 
 
 @app.route('/project')
